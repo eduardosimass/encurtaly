@@ -3,6 +3,12 @@
 - Desenvolver um Encurtador de Links, que redirecione o Link encurtado para a pagina desejada. 
 ![encurtalyy](https://github.com/user-attachments/assets/fc95be9f-cd81-4bce-8a71-657318875993)
 - Imlpementado em banco H2 neste momento, mas será migrado para Postgres. 
+- Realizado Deploy na Render.com -> https://encurtaly.onrender.com/encurtaly
+- Faça uma requisição post para o endereço passando no body este json
+- {
+    "urlLonga": "seusiteaqui"
+}
+
 
 ## Requisitos
 
