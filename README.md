@@ -15,7 +15,7 @@
   status `HTTP 404 (Not Found)`.
 
 ## Falta Implementar 
-- Deploy na AWS .
+- [x]  Deploy na Nuvem.
 - Criar testes Unitários.
 - Criar banco através de Migrations.
 - [x]  Criar metodo para criar QrCodes.
