@@ -28,7 +28,7 @@ private LinkService linkService;
      String urlOriginal = request.get("urlLonga");
      Link link = linkService.encurtarUrl(urlOriginal);
 
-     String gerarUrlDeRedirecionamento  = "https://encurtaly.onrender.com/" + link.getUrlEncurtada();
+     String gerarUrlDeRedirecionamento  = "https://encurtaly.onrender.com/r/" + link.getUrlEncurtada();
      LinkResponse response = new LinkResponse(
              link.getId(),
              link.getUrlLonga(),
