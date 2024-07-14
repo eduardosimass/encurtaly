@@ -18,4 +18,4 @@
 - Deploy na AWS .
 - Criar testes Unitários.
 - Criar banco através de Migrations.
-[x]  Criar metodo para criar QrCodes.
+- [x]  Criar metodo para criar QrCodes.
