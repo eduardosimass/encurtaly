@@ -6,23 +6,20 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
-
 @Entity
-@Table(name = "Links")
+@Table(name = "QrCode")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class Link {
+public class QrCode {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String urlLonga;
-    private String urlEncurtada;
-    @OneToOne(cascade=CascadeType.PERSIST)
-    private QrCode urlQrCode;
-    private LocalDateTime urlCriadaEm;
+    @Column(name = "QrCodeImage", length = 1024)
+    private String QrCodeImage;
+
 
 }

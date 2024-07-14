@@ -18,6 +18,6 @@ public class LinkResponse {
     private Long id;
     private String urlLonga;
     private String urlEncurtada;
-    private String urlQrCode;
+    private QrCode urlQrCode;
     private LocalDateTime urlCriadaEm;
 }

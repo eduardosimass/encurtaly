@@ -1,7 +1,9 @@
 package dev.simas.Encurtaly.Controller;
 
+import com.google.zxing.WriterException;
 import dev.simas.Encurtaly.model.Link;
 import dev.simas.Encurtaly.model.LinkResponse;
+import dev.simas.Encurtaly.model.QrCode;
 import dev.simas.Encurtaly.service.LinkService;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,9 +23,10 @@ private LinkService linkService;
 
 
  @PostMapping("/encurtaly")
-    public ResponseEntity<LinkResponse> gerarUrl(@RequestBody Map<String, String> request){
+    public ResponseEntity<LinkResponse> gerarUrl(@RequestBody Map<String, String> request) throws IOException, WriterException {
 
      String urlOriginal = request.get("urlLonga");
+     QrCode qrcode = new QrCode();
      Link link = linkService.encurtarUrl(urlOriginal);
 
      String gerarUrlDeRedirecionamento  = "http://localhost:8009/r/" + link.getUrlEncurtada();
