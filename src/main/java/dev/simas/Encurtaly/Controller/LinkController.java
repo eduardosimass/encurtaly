@@ -26,10 +26,9 @@ private LinkService linkService;
     public ResponseEntity<LinkResponse> gerarUrl(@RequestBody Map<String, String> request) throws IOException, WriterException {
 
      String urlOriginal = request.get("urlLonga");
-     QrCode qrcode = new QrCode();
      Link link = linkService.encurtarUrl(urlOriginal);
 
-     String gerarUrlDeRedirecionamento  = "https://encurtaly.onrender.com" + link.getUrlEncurtada();
+     String gerarUrlDeRedirecionamento  = "https://encurtaly.onrender.com/" + link.getUrlEncurtada();
      LinkResponse response = new LinkResponse(
              link.getId(),
              link.getUrlLonga(),
