@@ -1,8 +1,8 @@
 ## Projeto Java Spring Boot 
 
 - Desenvolver um Encurtador de Links, que redirecione o Link encurtado para a pagina desejada. 
-
-
+![encurtalyy](https://github.com/user-attachments/assets/fc95be9f-cd81-4bce-8a71-657318875993)
+- Imlpementado em banco H2 neste momento, mas será migrado para Postgres. 
 
 ## Requisitos
 
@@ -13,3 +13,8 @@
 - Ao receber uma chamada para a URL encurtada `https://xxx.com/DXB6V`, você deve fazer o redirecionamento para a
   URL original salva no banco de dados. Caso a URL não seja encontrada no banco, retorne o código de
   status `HTTP 404 (Not Found)`.
+
+## Falta Implementar 
+- Deploy na AWS .
+- Criar testes Unitários.
+- Criar banco através de Migrations.
