@@ -29,7 +29,7 @@ private LinkService linkService;
      QrCode qrcode = new QrCode();
      Link link = linkService.encurtarUrl(urlOriginal);
 
-     String gerarUrlDeRedirecionamento  = "http://localhost:8009/r/" + link.getUrlEncurtada();
+     String gerarUrlDeRedirecionamento  = "https://encurtaly.onrender.com" + link.getUrlEncurtada();
      LinkResponse response = new LinkResponse(
              link.getId(),
              link.getUrlLonga(),
